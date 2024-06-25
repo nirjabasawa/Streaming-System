@@ -1,9 +1,15 @@
 package com.company;
 
+// 
+// Nirja Basawa
+// StreamingSystem.java
+//
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+// create class to be called by StreamingSystemApp
 public class StreamingSystem {
     private ArrayList<User> userDatabase;
 
@@ -11,6 +17,8 @@ public class StreamingSystem {
         userDatabase = new ArrayList<User>();
     }
 
+    // start()
+    // display user interface and provide selectable options for user
     public void start() throws Unplayable {
         Scanner userInput = new Scanner(System.in);
         System.out.println("Main menu:\n"
@@ -20,6 +28,7 @@ public class StreamingSystem {
                 + "[4] User menu\n"
                 + "[5] Exit\n"
                 + "What is your choice? ");
+        
         int choice = userInput.nextInt();
         switch(choice) {
             case 1: //create user to add to database
@@ -45,8 +54,8 @@ public class StreamingSystem {
         start();
     }
 
-
-
+    // removeUser()
+    // delete user by user choice
     public void removeUser() throws Unplayable {
         Scanner userInput = new Scanner(System.in);
         System.out.println("Remove user menu:\n"
@@ -80,7 +89,8 @@ public class StreamingSystem {
         }
     }
 
-
+    // userStats()
+    // display user statistics
     public String userStats() {
         String stats = "";
         for (int index = 0; index < userDatabase.size(); index++){
@@ -89,7 +99,8 @@ public class StreamingSystem {
         return stats;
     }
 
-
+    // userMenu()
+    // display interactable menu for user to edit playlist
     public void userMenu() throws Unplayable {
         Scanner userInput = new Scanner(System.in);
         System.out.println("Which user would you like to edit? Enter the user ID.");
@@ -148,6 +159,8 @@ public class StreamingSystem {
 
     }
 
+    // removeRecording()
+    // removes recording from playlist based on index/name
     public void removeRecording(User currentUser) throws Unplayable {
         Scanner userInput = new Scanner(System.in);
         System.out.println("Remove recording from playlist menu:\r\n"
@@ -173,6 +186,8 @@ public class StreamingSystem {
         }
     }
 
+    // playRecording()
+    // plays recording for currentUser based on index/name
     public void playRecording(User currentUser) throws Unplayable {
         Scanner userInput = new Scanner(System.in);
         System.out.println("Play individual recording menu:\r\n"
