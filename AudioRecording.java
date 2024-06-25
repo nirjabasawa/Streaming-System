@@ -1,5 +1,11 @@
 package com.company;
 
+// 
+// Nirja Basawa
+// AudioRecording.java
+// 
+
+// create AudioRecording class from Recording class
 public class AudioRecording extends Recording{
     protected final double bitrate;
     public AudioRecording(){
