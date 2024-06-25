@@ -1,12 +1,17 @@
 package com.company;
 
+// 
+// Nirja Basawa
+// Playlist.java
+//
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.ArrayList;
 
-
+// playlist implements the abstract method from Playable
 public class Playlist implements Playable{
     private String name;
     protected int numberOfRecordings = 0;
@@ -54,6 +59,8 @@ public class Playlist implements Playable{
     }
 
     // methods that add new recordings
+
+    // add recording using newRecording
     public boolean add(Recording newRecording){
         // Make sure we can add this recording first (not null)
         if (newRecording != null){
@@ -77,6 +84,7 @@ public class Playlist implements Playable{
             return false;
         }
     }
+    // add recording based on File fileName
     public boolean add(File fileName){
         if (fileName != null) {
             try {
