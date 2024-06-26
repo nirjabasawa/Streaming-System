@@ -4,13 +4,14 @@ import java.io.*;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-
+// User class created to interact with interface/menu
 public class User implements Playable{
     private final String username;
     private int userID;
     private Playlist myPlaylist;
     private static int count = 0;
 
+    // create User
     public User(){
         username = addName();
         userID = count;
@@ -18,6 +19,7 @@ public class User implements Playable{
         myPlaylist = new Playlist();
     }
 
+    // add username to user
     public String addName(){
         Scanner read = new Scanner(System.in);
         System.out.print("Please enter a username: ");
@@ -43,6 +45,7 @@ public class User implements Playable{
         myPlaylist.remove(index);
     }
 
+    // allow user to add a recording to the playlist
     public void add(){
         Scanner userInput = new Scanner(System.in);
         System.out.print("Please enter the artist name: ");
