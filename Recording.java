@@ -1,15 +1,14 @@
 package com.company;
-
+// abstract class Recording, parent of VideoRecording, AudioRecording
 public abstract class Recording implements Playable{
     // Class attributes / fields
-    // Final because we can only set it once
     protected String artist;
     protected String recordingName;
     protected int durationInSeconds;
     protected int numOfPlays;
 
     // Non-parametrized constructor
-    // Essentially here to prevent Java from setting Strings to default null
+    // here to prevent Java from setting Strings to default null
     Recording(){
         this.artist = "Unknown";
         this.recordingName = "Unknown";
