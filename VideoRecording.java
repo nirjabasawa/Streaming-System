@@ -1,5 +1,5 @@
 package com.company;
-
+// class VideoRecording derived from Recording class - similar to AudioRecording, includes instance framerate
 public class VideoRecording extends Recording{
     protected final double framerate;
     public VideoRecording(){
